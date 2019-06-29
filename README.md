@@ -15,25 +15,25 @@ Also, I have no idea if I spelled your names right in English, so feel free to f
 ## What we did
 Generally speaking, we threw a bunch of things at the wall to see what stuck. Some things turned out more promising than others, and most of them found at least some interesting results. We're putting a brief explanation of everything we tried and what problems we ran into, in the hopes that someone else might want to continue what we started.
 
-1. Data Exploration - *Ido*
-2. Language parsing with yap - *Ofek and Noam*
-3. Topic modeling with LDA - *Eliana and Yonatan*
-4. Document classification with word2vec and Google Translate - *Ofek, and I have no idea if this is a good title so feel free to change it.*
-5. Measure of MK participation by topic - *Yonatan and Noam*
+1. [Data Exploration](#data-exploration) - *Ido*
+2. [Language parsing with yap](#language-parsing-yap) - *Ofek and Noam*
+3. [Topic modeling with LDA](#topic-modeling-lda) - *Eliana and Yonatan*
+4. [Document classification with word2vec and Google Translate](#document-classification-word2vec) - *Ofek, and I have no idea if this is a good title so feel free to change it.*
+5. [Measure of MK participation by topic](#measure-of-mk-participation) - *Yonatan and Noam*
 
-## 1. Data Exploration
+## Data Exploration
 *Ido*
 
 ...
 
 
-## 2. Language Parsing (yap)
+## Language Parsing (yap)
 *Ofek and Noam*
 
 ...
 
 
-## 3. Topic modeling (LDA)
+## Topic modeling (LDA)
 *Schwammi - I filled this one out, but feel free to add.*
 
 LDA is a generative statistical topic model. Here's basically how it works:
@@ -65,13 +65,13 @@ Problems we ran into:
 **Bottom line: This could actually work pretty well if we had more time and computing power to work with. Hopefully someone can take our code and use it to do that.**
 
 
-## 4. Document classification (word2vec)
+## Document classification (word2vec)
 *Ofek*
 
 ...
 
 
-## 5. Measure of MK participation
+## Measure of MK participation
 *Yonatan and Noam*
 
 ...
