@@ -10,12 +10,12 @@ The goal was motivated by the belief that most of the parliamentary activity is 
 ## Team members
 *I put our emails in here in case people have further questions. If you'd rather people not email you, I'll just put my email in here. Let me know :)
 Also, I have no idea if I spelled your names right in English, so feel free to fix it if I messed it up.*
-- Eliana Ruby (elr6577@gmail.com)
+- Eliana Ruby 
 - Ido Greenberg
-- Tomer Loterman (lotem.tomer1@gmail.com)
-- Noam Bresler (noamzbr@gmail.com)
-- Yonatan Schwammenthal (yonatansc97@gmail.com)
-- Ofek Zicher (ofek.zicher40@gmail.com)
+- Tomer Loterman 
+- Noam Bresler 
+- Yonatan Schwammenthal 
+- Ofek Zicher 
 
 
 ## What we did
