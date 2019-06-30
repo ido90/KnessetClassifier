@@ -5,7 +5,7 @@
 *I put our emails in here in case people have further questions. If you'd rather people not email you, I'll just put my email in here. Let me know :)
 Also, I have no idea if I spelled your names right in English, so feel free to fix it if I messed it up.*
 - Eliana Ruby (elr6577@gmail.com)
-- Ido Greenberg (idogreenberg90@gmail.com)
+- Ido Greenberg
 - Tomer Loterman (lotem.tomer1@gmail.com)
 - Noam Bresler (noamzbr@gmail.com)
 - Yonatan Schwammenthal (yonatansc97@gmail.com)
@@ -15,17 +15,20 @@ Also, I have no idea if I spelled your names right in English, so feel free to f
 ## What we did
 Generally speaking, we threw a bunch of things at the wall to see what stuck. Some things turned out more promising than others, and most of them found at least some interesting results. We're putting a brief explanation of everything we tried and what problems we ran into, in the hopes that someone else might want to continue what we started.
 
-1. [Data Exploration](#data-exploration) - *Ido*
+1. [Data Exploration](#data-exploration)
 2. [Language parsing with yap](#language-parsing-yap) - *Ofek and Noam*
 3. [Topic modeling with LDA](#topic-modeling-lda) - *Eliana and Yonatan*
 4. [Document classification with word2vec and Google Translate](#document-classification-word2vec) - *Ofek, and I have no idea if this is a good title so feel free to change it.*
 5. [Measure of MK participation by topic](#measure-of-mk-participation) - *Yonatan and Noam*
 
 ## Data Exploration
-*Ido*
+The [available data](https://console.cloud.google.com/storage/browser/knesset-data-pipelines/data/committees/meeting_protocols_parts/files/?project=hasadna-oknesset&pli=1) include 37K protocols of few hundreds committees in 9 Knessets in 2004-2018, as can be seen [here](https://github.com/ido90/KnessetClassifier/blob/master/Loader.ipynb). Additional metadata such as committees names and categories are available, and it is [accordingly shown](https://github.com/ido90/KnessetClassifier/blob/master/DataExploration.ipynb) that the data are dominated by protocols of few committees of type "constant primary".
 
-...
+[Further study](https://github.com/ido90/KnessetClassifier/blob/master/PersonalAnalysis.ipynb) of the data showed troubling inconsistencies in committees names, protocols dates and protocols introduction sections, making the data harder to work with. Yet, some interesting information was extracted as demonstrated below.
 
+| ![](https://idogreenberg.neocities.org/linked_images/Knesset_Activity.png) |
+| :--: |
+| Activity of a few Knesset Members over the years. For each member, the number of protocols in which he spoke was counted. Only top 4 committees are shown per member. Note that **the accuracy of the data summarized in the figures is not guaranteed**. |
 
 ## Language Parsing (yap)
 *Ofek and Noam*
