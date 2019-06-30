@@ -1,5 +1,11 @@
 # KnessetClassifier
+
 *All the italics are things you should fill in/instructions.*
+
+## Abstract
+This project was carried out in June 2019 as part of a Hackathon marking 40 years for Talpiot training program.
+The project was supervised by the [workshop for public knowledge](https://www.hasadna.org.il/), and was aimed to **develop useful tools and insights regarding protocols of the Israeli Knesset Committees (documented in Hebrew), with the major task of automatically clustering and labeling protocols by topic**.
+The goal was motivated by the belief that most of the parliamentary activity is carried on in the committees, and is difficult to regularly follow and understand (e.g. compared to the very structured information of bills votes).
 
 ## Team members
 *I put our emails in here in case people have further questions. If you'd rather people not email you, I'll just put my email in here. Let me know :)
@@ -16,10 +22,11 @@ Also, I have no idea if I spelled your names right in English, so feel free to f
 Generally speaking, we threw a bunch of things at the wall to see what stuck. Some things turned out more promising than others, and most of them found at least some interesting results. We're putting a brief explanation of everything we tried and what problems we ran into, in the hopes that someone else might want to continue what we started.
 
 1. [Data Exploration](#data-exploration)
-2. [Language parsing with yap](#language-parsing-yap) - *Ofek and Noam*
+2. [Language parsing with yap](#language-parsing) - *Ofek and Noam*
 3. [Topic modeling with LDA](#topic-modeling-lda) - *Eliana and Yonatan*
-4. [Document classification with word2vec and Google Translate](#document-classification-word2vec) - *Ofek, and I have no idea if this is a good title so feel free to change it.*
+4. [Document classification with word2vec and Google Translate](#translation-based-analysis) - *Ofek*
 5. [Measure of MK participation by topic](#measure-of-mk-participation) - *Yonatan and Noam*
+
 
 ## Data Exploration
 The [available data](https://console.cloud.google.com/storage/browser/knesset-data-pipelines/data/committees/meeting_protocols_parts/files/?project=hasadna-oknesset&pli=1) include 37K protocols of few hundreds committees in 9 Knessets in 2004-2018, as can be seen [here](https://github.com/ido90/KnessetClassifier/blob/master/Loader.ipynb). Additional metadata such as committees names and categories are available, and it is [accordingly shown](https://github.com/ido90/KnessetClassifier/blob/master/DataExploration.ipynb) that the data are dominated by protocols of few committees of type "constant primary".
@@ -30,15 +37,14 @@ The [available data](https://console.cloud.google.com/storage/browser/knesset-da
 | :--: |
 | Activity of a few Knesset Members over the years. For each member, the number of protocols in which he spoke was counted. Only top 4 committees are shown per member. Note that **the accuracy of the data summarized in the figures is not guaranteed**. |
 
-## Language Parsing (yap)
-*Ofek and Noam*
 
-...
+## Language Parsing
+The preprocessing of the textual data was implemented using the excellent software of [YAP](https://github.com/habeanf/yap) for Hebrew parsing, and included tokenization, tagging and filtering of parts-of-speech, and lemmatization of words.
+
+In the constrained timeline of the hackathon, and since the POS-tagging of sentences is a quite slow process, some of the clustering merely used the simple tokenize() function [here](https://github.com/ido90/KnessetClassifier/blob/master/Parser.py).
 
 
-## Topic modeling (LDA)
-*Schwammi - I filled this one out, but feel free to add.*
-
+## Topic Modeling (LDA)
 LDA is a generative statistical topic model. Here's basically how it works:
 - The model gets a bunch of documents, 
 - Each document is modeled as a collection of words (aka a Bag of Words model).
@@ -68,13 +74,16 @@ Problems we ran into:
 **Bottom line: This could actually work pretty well if we had more time and computing power to work with. Hopefully someone can take our code and use it to do that.**
 
 
-## Document classification (word2vec)
-*Ofek*
+## Translation-based Analysis
 
-...
+Since available NLP software for Hebrew pales in comparison to the tools available for English, a possible shortcut to cutting-edge NLP in Hebrew might be translation of the text from Hebrew to English.
+Fortunately, even though the technological challenge of translation is difficult by itself, several relevant tools are available in this case.
+
+We showed that it is possible to efficiently **translate committees protocols using the corresponding API of Google Translate, and demonstrated the use of word2vec representation of the translated text for clustering**.
+While the time did not permit any further applications, **we believe that this approach may have large potential for future use**.
 
 
 ## Measure of MK participation
 *Yonatan and Noam*
 
-...
+TODO
