@@ -50,6 +50,7 @@ If you wish to use the YAP engine, go over the following steps:
 2. [Install](https://golang.org/doc/install) go
 3. Install [YAP](https://github.com/habeanf/yap) 
 we rcommend using the YAP api, which will run on your machine after installation using:
+
 ./yap api -cpus NUM_OF_CPUS
 
 
@@ -93,6 +94,9 @@ While the time did not permit any further applications, **we believe that this a
 
 
 ## Measure of MK participation
-*Yonatan and Noam*
+
+This section expands a bit on on the data exploration presented at the beggining. Essenstially the committee dataset contains the text spoken by each committee member, which enables us to track not only the MK binary participation / lack therof in a committee, but also a more complex measure of his presenct. One such naive measure is the amount of words/chars contained in said MK speach per committee. This dirction was [strated](https://github.com/ido90/KnessetClassifier/blob/master/members_analytics.ipynb) but never completed due to lack of time. 
+
+*Yonatan complete stuff about your MK participation measure here*
 
 TODO
