@@ -43,6 +43,15 @@ The preprocessing of the textual data was implemented using the excellent softwa
 
 In the constrained timeline of the hackathon, and since the POS-tagging of sentences is a quite slow process, some of the clustering merely used the simple tokenize() function [here](https://github.com/ido90/KnessetClassifier/blob/master/Parser.py).
 
+A back of the envelope calculation we did concluded that on a single core machine, it would take 1000-2000 hours to process the whole comittee dataset using YAP. This may sound like a lot, but multiple cpu machines are quite common today, so this operation may be done over a weekend on, for example, a 20 core machine.
+
+If you wish to use the YAP engine, go over the following steps:
+1. [Download](https://golang.org/dl/) go
+2. [Install](https://golang.org/doc/install) go
+3. Install [YAP](https://github.com/habeanf/yap) 
+we rcommend using the YAP api, which will run on your machine after installation using:
+./yap api -cpus NUM_OF_CPUS
+
 
 ## Topic Modeling (LDA)
 LDA is a generative statistical topic model. Here's basically how it works:
