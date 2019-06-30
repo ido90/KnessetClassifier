@@ -24,7 +24,7 @@ Generally speaking, we threw a bunch of things at the wall to see what stuck. So
 ## Data Exploration
 The [available data](https://console.cloud.google.com/storage/browser/knesset-data-pipelines/data/committees/meeting_protocols_parts/files/?project=hasadna-oknesset&pli=1) include 37K protocols of few hundreds committees in 9 Knessets in 2004-2018, as can be seen [here](https://github.com/ido90/KnessetClassifier/blob/master/Loader.ipynb). Additional metadata such as committees names and categories are available, and it is [accordingly shown](https://github.com/ido90/KnessetClassifier/blob/master/DataExploration.ipynb) that the data are dominated by protocols of few committees of type "constant primary".
 
-[Further study](https://github.com/ido90/KnessetClassifier/blob/master/PersonalAnalysis.ipynb) of the data showed troubling inconsistencies in committees names, protocols dates and protocols introduction sections, making the data harder to work with. Yet, some interesting information was extracted as demonstrated below.
+[Further study](https://github.com/ido90/KnessetClassifier/blob/master/PersonalAnalysis.ipynb) of the data showed troubling inconsistencies in committees names, protocols dates and protocols introduction sections, making the data harder to work with. Yet, some interesting information was extracted as demonstrated in the example below.
 
 | ![](https://idogreenberg.neocities.org/linked_images/Knesset_Activity.png) |
 | :--: |
