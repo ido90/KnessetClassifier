@@ -89,9 +89,8 @@ Problems we ran into:
 Since available NLP software for Hebrew pales in comparison to the tools available for English, a possible shortcut to cutting-edge NLP in Hebrew might be translation of the text from Hebrew to English.
 Fortunately, even though the technological challenge of translation is difficult by itself, several relevant tools are available in this case.
 
-We showed that it is possible to efficiently **translate committees protocols using the corresponding API of Google Translate, and demonstrated the use of word2vec representation of the translated text for clustering**.
-While the time did not permit any further applications, **we believe that this approach may have large potential for future use**.
-
+We showed that it is possible to efficiently **translate committees protocols using the corresponding API of Google Translate, and demonstrated the use of Word2Vec representation of the translated text for clustering**.
+While the time did not permit any further applications, **we believe that this approach may have large potential for future use**. For example: only by averaging word vectors for each document in the corpus, we saw some example of simillar documents having smaller Mean Squarred Errors (or any other metric/s) from each other, and vice-versa. Theres also an approach of finding/training a hebrew vectorizer (Word2Vec is a model trained on Wikipedia), but we did not dive into that.
 
 ## Measure of MK participation
 
