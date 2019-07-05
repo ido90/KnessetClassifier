@@ -1,15 +1,12 @@
 # KnessetClassifier
 
-*All the italics are things you should fill in/instructions.*
-
 ## Abstract
 This project was carried out in June 2019 as part of a Hackathon marking 40 years for Talpiot training program.
 The project was supervised by the [workshop for public knowledge](https://www.hasadna.org.il/), and was aimed to **develop useful tools and insights regarding protocols of the Israeli Knesset Committees (documented in Hebrew), with the major task of automatically clustering and labeling protocols by topic**.
 The goal was motivated by the belief that most of the parliamentary activity is carried on in the committees, and is difficult to regularly follow and understand (e.g. compared to the very structured information of bills votes).
 
+
 ## Team members
-*I put our emails in here in case people have further questions. If you'd rather people not email you, I'll just put my email in here. Let me know :)
-Also, I have no idea if I spelled your names right in English, so feel free to fix it if I messed it up.*
 - Eliana Ruby 
 - Ido Greenberg
 - Tomer Loterman 
@@ -22,10 +19,10 @@ Also, I have no idea if I spelled your names right in English, so feel free to f
 Generally speaking, we threw a bunch of things at the wall to see what stuck. Some things turned out more promising than others, and most of them found at least some interesting results. We're putting a brief explanation of everything we tried and what problems we ran into, in the hopes that someone else might want to continue what we started.
 
 1. [Data Exploration](#data-exploration)
-2. [Language parsing with yap](#language-parsing) - *Ofek and Noam*
-3. [Topic modeling with LDA](#topic-modeling-lda) - *Eliana and Yonatan*
-4. [Document classification with word2vec and Google Translate](#translation-based-analysis) - *Ofek*
-5. [Measure of MK participation by topic](#measure-of-mk-participation) - *Yonatan and Noam*
+2. [Language parsing with yap](#language-parsing)
+3. [Topic modeling with LDA](#topic-modeling-lda)
+4. [Document classification with word2vec and Google Translate](#translation-based-analysis)
+5. [Measure of MK participation by topic](#measure-of-mk-participation)
 
 
 ## Data Exploration
@@ -48,10 +45,10 @@ A back of the envelope calculation we did concluded that on a single core machin
 If you wish to use the YAP engine, go over the following steps:
 1. [Download](https://golang.org/dl/) go
 2. [Install](https://golang.org/doc/install) go
-3. Install [YAP](https://github.com/habeanf/yap) 
-we rcommend using the YAP api, which will run on your machine after installation using:
+3. Install [YAP](https://github.com/habeanf/yap)
 
-./yap api -cpus NUM_OF_CPUS
+We rcommend using the YAP api, which will run on your machine after installation using:
+``` ./yap api -cpus NUM_OF_CPUS ```
 
 
 ## Topic Modeling (LDA)
@@ -94,8 +91,4 @@ While the time did not permit any further applications, **we believe that this a
 
 ## Measure of MK participation
 
-This section expands a bit on on the data exploration presented at the beggining. Essenstially the committee dataset contains the text spoken by each committee member, which enables us to track not only the MK binary participation / lack therof in a committee, but also a more complex measure of his presenct. One such naive measure is the amount of words/chars contained in said MK speach per committee. This dirction was [strated](https://github.com/ido90/KnessetClassifier/blob/master/members_analytics.ipynb) but never completed due to lack of time. 
-
-*Yonatan complete stuff about your MK participation measure here*
-
-TODO
+This section expands a bit on on the data exploration presented at the beggining. Essenstially the committee dataset contains the text spoken by each committee member, which enables us to track not only the MK binary participation / lack therof in a committee, but also a more complex measure of his presenct. One such naive measure is the amount of words/chars contained in said MK speach per committee. This direction was [started](https://github.com/ido90/KnessetClassifier/blob/master/members_analytics.ipynb) but never completed due to lack of time. 
